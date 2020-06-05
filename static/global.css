@@ -1,0 +1,107 @@
+:root {
+	--primary: #000000;
+	--blue: #7992b4;
+	--yellow: #d7be5a;
+	--red: #e02a2a;
+	--breakpoint: 695px;
+	--roundness: 4px;
+	--white: #e8e8d0;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--white);
+	font-size: 14pt;
+}
+
+article, section {
+	margin: 0;
+}
+
+section {
+	padding: 1rem;
+	padding-bottom: 3rem;
+}
+
+a, a :hover, a :visited {
+	color: black;
+	text-decoration: none;
+}
+
+a :hover {
+	color: var(--blue);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	background: var(--primary);
+	color: white;
+	padding: 0.5rem;
+	height: 1.5rem;
+	z-index: 3;
+}
+
+header ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header li {
+	margin-left: 0.5rem;
+}
+
+a, a :hover, a :visited {
+	text-decoration: none;
+	color: var(--red);
+	font-weight: bold;
+}
+
+nav ul {
+	list-style: none;
+}
+
+main {
+	padding: 1rem;
+	font-size: large;
+	height: 100%;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+.jakecoffman {
+	margin-left: 1rem;
+}
+
+h2 {
+	font-size: 5vw;
+	margin: 1rem 0 2rem;
+	color: var(--yellow);
+	text-shadow: 1px 3px var(--red), 3px 5px black;
+}
+
+h3 {
+	font-size: 20pt;
+	margin: 0;
+	color: var(--yellow);
+	text-shadow: 1px 1px var(--red), 2px 3px black;
+}
+
+.btn {
+	border: 0;
+	border-radius: 3px;
+	padding: .5rem 1.5rem;
+}
+
+.btn:hover {
+	/*background: rgba(75, 162, 162, 0.07);*/
+	background: var(--yellow);
+}
