@@ -12,6 +12,9 @@
 	}
 
 	.heroic {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		transform: matrix(1, 0.10, 0, 1, 0, 0);
 		font-variant: small-caps;
 		color: var(--yellow);
@@ -39,10 +42,9 @@
 
 	@media (max-width: 695px) {
 		h1 {
-			font-size: 16vw;
+			font-size: 15vw;
 			text-shadow: 1px 3px var(--red), 3px 6px black;
 			white-space: nowrap;
-			margin-left: -1.6rem;
 		}
 		.tagline {
 			text-shadow: 1px 2px var(--red), 2px 4px black;
@@ -59,11 +61,4 @@
 		<h1>Jake Coffman</h1>
 		<span class="tagline">Software Developer</span>
 	</div>
-	<style>
-		.embolden {
-			color: black;
-			font-weight: bolder;
-			font-style: italic;
-		}
-	</style>
 </section>

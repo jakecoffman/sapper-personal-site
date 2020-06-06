@@ -1,7 +1,4 @@
 <style>
-  h2 {
-    font-size: 50pt;
-  }
   h3 {
     margin-top: 2rem;
     font-size: 25pt;
@@ -38,10 +35,6 @@
     Now I am at World Wide Technology where I work on a variety of web-based technologies. I am the principal
     developer behind the ATC Gateway and related technologies. I have open sourced
     <a href="https://github.com/wwt/guac">a port of Apache Guacamole's guacamole-server</a>.
-  </p>
-
-  <p>
-
   </p>
 
   <h3>Interests</h3>

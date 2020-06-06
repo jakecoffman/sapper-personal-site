@@ -47,6 +47,12 @@ h2 {
 	text-shadow: 1px 3px var(--red), 3px 5px black;
 }
 
+@media (max-width: 695px) {
+	h2 {
+		font-size: 40pt;
+	}
+}
+
 h3 {
 	font-size: 20pt;
 	margin: 0;
