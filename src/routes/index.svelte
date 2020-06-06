@@ -15,25 +15,33 @@
 		height: 1.5rem;
 		z-index: 3;
 	}
+	.jakecoffman {
+		margin-left: 1rem;
+	}
+
 	@media (max-width: 695px) {
 		header {
 			font-size: .85rem;
 		}
+		.jakecoffman {
+			display: none;
+		}
 	}
-	header ul {
+	ul {
 		display: flex;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
-	header li {
+	li {
 		margin-left: 0.5rem;
 	}
-	header a {
+	a {
 		color: white;
+		transition: color .5s;
 	}
-	nav ul {
-		list-style: none;
+	a:hover {
+		color: var(--red);
 	}
 </style>
 
@@ -54,6 +62,9 @@
 			</li>
 			<li>
 				<a href="#qa">Q&A</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
 			</li>
 			<li>
 				<a href="https://www.jakecoffman.com/blog">Blog</a>
