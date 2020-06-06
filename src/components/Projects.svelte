@@ -1,8 +1,4 @@
 <style>
-  a, a :hover, a :visited {
-    color: var(--yellow);
-  }
-
   #projects {
     background: var(--blue);
   }

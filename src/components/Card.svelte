@@ -43,7 +43,6 @@
 
   .project-text {
     font-size: 11pt;
-    background-color: #ffffff;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -58,7 +57,7 @@
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: var(--white);
   }
 
   .card p {

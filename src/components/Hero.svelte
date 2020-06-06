@@ -34,7 +34,7 @@
 		top: 70px;
 		right: 10px;
 		display: block;
-		width: 64px;
+		width: 128px;
 		height: auto;
 		border-radius: 100%;
 		border: 5px solid var(--yellow);
@@ -51,6 +51,15 @@
 		}
 		#hero {
 			padding-bottom: 6rem;
+		}
+		#logo {
+			width: 64px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		#logo {
+			width: 167px;
 		}
 	}
 </style>

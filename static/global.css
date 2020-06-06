@@ -1,7 +1,7 @@
 :root {
 	--primary: #000000;
 	--blue: #7992b4;
-	--yellow: #d7be5a;
+	--yellow: #d5a900;
 	--red: #e02a2a;
 	--breakpoint: 695px;
 	--roundness: 4px;
@@ -26,14 +26,15 @@ section {
 	padding: 1rem 1rem 3rem;
 }
 
-a :hover {
-	color: var(--blue);
+a, a:visited {
+	text-decoration: none;
+	color: var(--yellow);
+	font-weight: bold;
+	transition: color .5s;
 }
 
-a, a :hover, a :visited {
-	text-decoration: none;
+a:hover {
 	color: var(--red);
-	font-weight: bold;
 }
 
 .grow {

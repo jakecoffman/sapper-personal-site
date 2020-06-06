@@ -35,7 +35,7 @@
   }
 
   a {
-    color: white;
+    color: var(--white);
     transition: color .5s;
   }
 
