@@ -82,7 +82,7 @@ main {
 }
 
 h2 {
-	font-size: 5vw;
+	font-size: 50pt;
 	margin: 1rem 0 2rem;
 	color: var(--yellow);
 	text-shadow: 1px 3px var(--red), 3px 5px black;
