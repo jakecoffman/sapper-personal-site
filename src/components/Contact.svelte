@@ -28,15 +28,45 @@
     padding: 1rem;
   }
 
-  img {
+  .logo {
     border-radius: 400px;
     width: 128px;
-    height: 128px;
+    height: auto;
     border: 5px solid var(--red);
   }
 
-  li {
-    margin-bottom: .5rem;
+  @media (max-width: 695px) {
+    .card {
+      grid-template-columns: 1fr;
+    }
+    .logo {
+      display: none;
+    }
+    ul {
+      padding: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  a {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  a > img {
+    margin-right: 1rem;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 <section id="contact">
@@ -48,11 +78,22 @@
 
   <div class="container">
     <div class="card">
-      <img src="logo.png" alt="Jake Coffman">
+      <span class="center">
+        <img class="logo" src="logo.png" alt="Jake Coffman">
+      </span>
       <ul>
-        <li><a href="https://twitter.com/nill">Twitter @nill</a></li>
-        <li><a href="https://github.com/jakecoffman">Github jakecoffman</a></li>
-        <li><a href="mailto:jake@jakecoffman.com">Email jake@jakecoffman.com</a></li>
+        <li><a href="https://twitter.com/nill">
+          <img src="twitter.svg" alt="twitter" class="center">
+          <span>@nill</span>
+        </a></li>
+        <li><a href="https://github.com/jakecoffman">
+          <img src="github.svg" alt="github">
+          <span>jakecoffman</span>
+        </a></li>
+        <li><a href="mailto:jake@jakecoffman.com">
+          <img src="email.svg" alt="email">
+          <span>jake@jakecoffman.com</span>
+        </a></li>
       </ul>
     </div>
   </div>

@@ -15,6 +15,11 @@
 		height: 1.5rem;
 		z-index: 3;
 	}
+	@media (max-width: 695px) {
+		header {
+			font-size: .85rem;
+		}
+	}
 	header ul {
 		display: flex;
 		list-style: none;
