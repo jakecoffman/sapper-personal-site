@@ -61,10 +61,6 @@
     background: white;
   }
 
-  .card h2 {
-    margin: .5rem 0 1rem;
-  }
-
   .card p {
     margin: 0;
     color: #545454;

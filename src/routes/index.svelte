@@ -6,8 +6,29 @@
 	import Contact from "../components/Contact.svelte";
 </script>
 <style>
+	header {
+		display: flex;
+		align-items: center;
+		background: black;
+		color: white;
+		padding: 0.5rem;
+		height: 1.5rem;
+		z-index: 3;
+	}
+	header ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	header li {
+		margin-left: 0.5rem;
+	}
 	header a {
 		color: white;
+	}
+	nav ul {
+		list-style: none;
 	}
 </style>
 
