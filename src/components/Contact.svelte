@@ -5,6 +5,7 @@
 
   #contact {
     background: var(--blue);
+    background-image: url("/hex.svg");
     padding-bottom: 200px;
   }
 

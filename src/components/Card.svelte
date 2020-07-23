@@ -28,7 +28,9 @@
 
 <style>
   h3 {
+    color: var(--blue);
     margin-bottom: .2rem;
+    text-shadow: none;
   }
 
   .card-link {

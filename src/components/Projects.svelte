@@ -1,6 +1,7 @@
 <style>
   #projects {
     background: var(--blue);
+    background-image: url("/hex.svg");
   }
 
   #projects h2 {

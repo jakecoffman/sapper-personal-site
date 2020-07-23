@@ -15,6 +15,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: var(--white);
+	background-image: url("/dot.svg");
 	font-size: 14pt;
 }
 
