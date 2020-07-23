@@ -24,7 +24,7 @@
 	}
 
 	#hero {
-		background: var(--blue);
+		background: var(--light-blue);
 		background-image: url("/hex.svg");
 		color: white;
 		padding: 4rem 2rem 8rem;

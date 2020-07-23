@@ -18,7 +18,7 @@
   <ul class="links">
     {#each links as link}
       <li>
-        <a href={link.href} target="_blank" class="btn">
+        <a href={link.href} target="_blank" rel="noopener" class="btn">
           {link.name}
         </a>
       </li>

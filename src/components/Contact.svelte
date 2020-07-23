@@ -4,7 +4,7 @@
   }
 
   #contact {
-    background: var(--blue);
+    background: var(--light-blue);
     background-image: url("/hex.svg");
     padding-bottom: 200px;
   }

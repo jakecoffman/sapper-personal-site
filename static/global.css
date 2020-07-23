@@ -1,11 +1,12 @@
 :root {
 	--primary: #000000;
-	--blue: #7992b4;
+	--light-blue: #7992b4;
+	--blue: #2b6ac2;
 	--yellow: #d5a900;
 	--red: #e02a2a;
 	--breakpoint: 695px;
 	--roundness: 4px;
-	--white: #e8e8d0;
+	--white: #eeeee7;
 }
 
 html, body {
