@@ -60,7 +60,7 @@ h3 {
 	font-size: 20pt;
 	margin: 0;
 	color: var(--yellow);
-	text-shadow: 1px 1px var(--red), 2px 3px black;
+	text-shadow: 1px 1px var(--red), 2px 2px black;
 }
 
 .btn {
