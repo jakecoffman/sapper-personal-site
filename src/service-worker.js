@@ -13,7 +13,7 @@ self.addEventListener('install', event => {
 			.open(ASSETS)
 			.then(cache => cache.addAll(to_cache))
 			.then(() => {
-				self.skipWaiting();
+				self.skipWaiting().catch();
 			})
 	);
 });
@@ -26,7 +26,7 @@ self.addEventListener('activate', event => {
 				if (key !== ASSETS) await caches.delete(key);
 			}
 
-			self.clients.claim();
+			self.clients.claim().catch();
 		})
 	);
 });
@@ -69,7 +69,7 @@ self.addEventListener('fetch', event => {
 			.then(async cache => {
 				try {
 					const response = await fetch(event.request);
-					cache.put(event.request, response.clone());
+					cache.put(event.request, response.clone()).catch();
 					return response;
 				} catch(err) {
 					const response = await cache.match(event.request);

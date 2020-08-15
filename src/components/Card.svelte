@@ -7,7 +7,7 @@
 
 <div class="card">
   <a class="card-link" href={link}>
-    <img class="p-img" alt={title} src={img}>
+    <img class="p-img" alt={title} src={img} loading="lazy">
   </a>
   <div class="project-text">
     <h3>{title}</h3>
