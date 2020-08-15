@@ -13,8 +13,9 @@ self.addEventListener('install', event => {
 			.open(ASSETS)
 			.then(cache => cache.addAll(to_cache))
 			.then(() => {
-				self.skipWaiting().catch();
+				self.skipWaiting().catch(e => console.error('error skipWaiting', e));
 			})
+			.catch(e => console.error('error installing service worker', e))
 	);
 });
 
@@ -26,7 +27,7 @@ self.addEventListener('activate', event => {
 				if (key !== ASSETS) await caches.delete(key);
 			}
 
-			self.clients.claim().catch();
+			self.clients.claim().catch(e => console.log('error claim', e));
 		})
 	);
 });
@@ -40,7 +41,9 @@ self.addEventListener('fetch', event => {
 	if (!url.protocol.startsWith('http')) return;
 
 	// ignore dev server requests
-	if (url.hostname === self.location.hostname && url.port !== self.location.port) return;
+	if (url.hostname === self.location.hostname && url.port !== self.location.port) {
+		return;
+	}
 
 	// always serve static files and bundler-generated assets from cache
 	if (url.host === self.location.host && cached.has(url.pathname)) {
@@ -58,7 +61,9 @@ self.addEventListener('fetch', event => {
 	}
 	*/
 
-	if (event.request.cache === 'only-if-cached') return;
+	if (event.request.cache === 'only-if-cached') {
+		return;
+	}
 
 	// for everything else, try the network first, falling back to
 	// cache if the user is offline. (If the pages never change, you
@@ -69,13 +74,13 @@ self.addEventListener('fetch', event => {
 			.then(async cache => {
 				try {
 					const response = await fetch(event.request);
-					cache.put(event.request, response.clone()).catch();
+					await cache.put(event.request, response.clone());
 					return response;
-				} catch(err) {
+				} catch (e) {
 					const response = await cache.match(event.request);
-					if (response) return response;
-
-					throw err;
+					if (response) {
+						return response;
+					}
 				}
 			})
 	);
