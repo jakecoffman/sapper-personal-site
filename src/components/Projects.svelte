@@ -33,9 +33,7 @@
 
   <div class="cards">
     {#each projects as project}
-      <Card title={project.title} link={project.link} img={project.image} links={project.links}>
-        {project.text}
-      </Card>
+      <Card {...project}/>
     {/each}
   </div>
 </section>
@@ -46,7 +44,6 @@
     title: 'STL Devs',
     link: 'https://stldevs.com',
     image: 'stldevs.png',
-    tags: ['Data Warehousing', 'Go', 'Vuejs', 'SQL'],
     text: 'This is a site for discovering what open source work developers are doing in the Greater St. Louis region by harvesting public information from Github.',
     links: [{
       href: 'https://stldevs.com',
@@ -56,7 +53,6 @@
     title: 'Tank Game',
     link: 'https://github.com/jakecoffman/tanks-unity/releases',
     image: 'tanks.png',
-    tags: ['Games', 'C#'],
     text: 'A multi-player game created with Unity. Think Wii Tanks but online, and with mouse and keyboard.',
 
     links: [{
@@ -71,7 +67,6 @@
     title: 'Tanklets',
     link: 'https://github.com/jakecoffman/tanklets/releases',
     image: 'tanklets.png',
-    tags: ['Games', 'Go', 'OpenGL'],
     text: 'Another Tank Game but written from scratch in Go. I used no game engine, had to learn OpenGL and ported Chipmunk2D for this project.',
 
     links: [{
@@ -84,8 +79,7 @@
   }, {
     title: 'fam',
     link: 'https://github.com/jakecoffman/fam',
-    image: 'fam.gif',
-    tags: ['Games', 'Go', 'OpenGL'],
+    video: 'fam.mp4',
     text: 'Another OpenGL game I am making to play with the kiddos.',
 
     links: [{
@@ -96,7 +90,6 @@
     title: 'Go physics',
     link: 'https://github.com/jakecoffman/cp',
     image: 'cp.gif',
-    tags: ['Games', 'Go'],
     text: 'Go port of the excellent Chipmunk2D, originally in C.',
     links: [{
       href: 'https://github.com/jakecoffman/cp',
@@ -106,7 +99,6 @@
     title: 'Matchville',
     link: 'https://set.jakecoffman.com',
     image: 'setgame.png',
-    tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
     text: 'Online multi-player set finding card game.',
 
     links: [{
@@ -120,7 +112,6 @@
     title: 'Colors',
     link: 'https://www.jakecoffman.com/colors',
     image: 'coloretto.png',
-    tags: ['Games', 'JavaScript', 'Vuejs'],
     text: 'Local multi-player color matching game.',
 
     links: [{
@@ -134,7 +125,6 @@
     title: 'Memory',
     link: 'https://www.jakecoffman.com/memory',
     image: 'memory.png',
-    tags: ['Games', 'JavaScript', 'Svelte'],
     text: "Local multi-player kid's game.",
 
     links: [{
@@ -148,7 +138,6 @@
     title: 'Spy Game',
     link: 'https://resistance.jakecoffman.com',
     image: 'resistance.png',
-    tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
     text: 'Multi-player game of intrigue. This is a good game to play over web-chat during a pandemic.',
 
     links: [{
@@ -162,7 +151,6 @@
     title: 'Spring Challenge',
     link: 'https://www.codingame.com/contests/spring-challenge-2020/leaderboard/global?column=keyword&value=jke',
     image: 'pacman.gif',
-    tags: ['Go', 'AI', 'Pathfinding'],
     text: "Placed 112th out of 5,000 in an AI Pathfinding competition. This was my first time programming AI and my first coding competition.",
     links: [{
       href: 'https://www.codingame.com/contests/spring-challenge-2020/leaderboard/global?column=keyword&value=jke',
@@ -172,7 +160,6 @@
     title: 'Trusted Friend',
     link: 'https://github.com/jakecoffman/trusted-friend',
     image: 'trustedfriend.png',
-    tags: ['Android', 'Java', 'Go', 'gRPC'],
     text: 'Trusted Friend is an Android app no longer in Google Play, but it allowed you to friend people and request their location.',
     links: [{
       href: 'http://github.com/jakecoffman/trusted-friend',
@@ -182,9 +169,7 @@
     title: 'camcontrol',
     link: 'http://github.com/jakecoffman/camcontrol',
     image: 'camcontrol.png',
-    tags: ['C++', 'Qt', 'VLC'],
     text: 'camcontrol is a Qt app with embedded VLC player to open and control multiple Amcrest cameras at once',
-
     links: [{
       href: 'http://github.com/jakecoffman/camcontrol',
       name: 'Source'
@@ -193,7 +178,6 @@
     title: 'Arduino Security',
     link: 'http://youtu.be/lfOxgK1-5HM',
     image: 'arduino.jpg',
-    tags: ['C', 'Arduino', 'Embedded'],
     text: 'One of my first open source contributions, an Arduino emailed me when my door opened',
 
     links: [{
@@ -207,10 +191,8 @@
     title: 'Gorunner',
     link: 'http://github.com/jakecoffman/gorunner',
     image: 'gorunner.png',
-    tags: ['Go', 'Angular'],
     text: `I used to be obsessed with making a better Jenkins. This was an early attempt
       using Go, with AngularJS on the frontend.`,
-
     links: [{
       href: 'http://github.com/jakecoffman/gorunner',
       name: 'Source'
@@ -219,7 +201,6 @@
     title: 'Video Tutorials',
     link: 'https://www.youtube.com/user/calicoJake/playlists',
     image: 'tutorials.png',
-    tags: ['Teaching'],
     text: `A long time ago I made programming video tutorials. It was a little experiment
       to see if I could make money off of it. Turns out no, but it was fun and I seemed to help a lot of people.`,
 

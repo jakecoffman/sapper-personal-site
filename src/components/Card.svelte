@@ -1,18 +1,27 @@
 <script>
   export let title;
   export let link;
-  export let img;
+  export let image;
+  export let video;
   export let links;
+  export let text;
 </script>
 
 <div class="card">
   <a class="card-link" href={link}>
-    <img class="p-img" alt={title} src={img} loading="lazy">
+    {#if image}
+      <img class="p-img" alt={title} src={image} loading="lazy">
+    {/if}
+    {#if video}
+      <video class="p-img" playsinline autoplay muted loop>
+        <source src={video} type="video/mp4">
+      </video>
+    {/if}
   </a>
   <div class="project-text">
     <h3>{title}</h3>
     <p class="grow">
-      <slot></slot>
+      {text}
     </p>
   </div>
   <ul class="links">
