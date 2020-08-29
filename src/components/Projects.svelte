@@ -34,9 +34,7 @@
   <div class="cards">
     {#each projects as project}
       <Card title={project.title} link={project.link} img={project.image} links={project.links}>
-        <div slot="text">
-          {project.text}
-        </div>
+        {project.text}
       </Card>
     {/each}
   </div>

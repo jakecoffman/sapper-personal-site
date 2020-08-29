@@ -73,10 +73,6 @@
 <section id="contact">
   <h2>Contact</h2>
 
-  <p>
-    This is a call to action!
-  </p>
-
   <div class="container">
     <div class="card">
       <span class="center">

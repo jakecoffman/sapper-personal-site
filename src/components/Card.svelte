@@ -12,7 +12,7 @@
   <div class="project-text">
     <h3>{title}</h3>
     <p class="grow">
-      <slot name="text"></slot>
+      <slot></slot>
     </p>
   </div>
   <ul class="links">

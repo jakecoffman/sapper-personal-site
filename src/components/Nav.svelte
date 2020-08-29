@@ -25,13 +25,10 @@
 
   ul {
     display: flex;
+    gap: 1rem;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-
-  li {
-    margin-left: 0.5rem;
   }
 
   a {
