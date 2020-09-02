@@ -87,11 +87,14 @@
       name: 'Source'
     }]
   }, {
-    title: 'Go physics',
+    title: 'Chipmunk Port',
     link: 'https://github.com/jakecoffman/cp',
     image: 'cp.gif',
     text: 'Go port of the excellent Chipmunk2D, originally in C.',
     links: [{
+      href: 'https://www.jakecoffman.com/cpebiten/',
+      name: 'Demo'
+    },{
       href: 'https://github.com/jakecoffman/cp',
       name: 'Source'
     }]
