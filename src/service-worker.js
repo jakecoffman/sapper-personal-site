@@ -15,7 +15,6 @@ self.addEventListener('install', event => {
 			.then(() => {
 				self.skipWaiting().catch(e => console.error('error skipWaiting', e));
 			})
-			.catch(e => console.error('error installing service worker', e))
 	);
 });
 
@@ -74,7 +73,7 @@ self.addEventListener('fetch', event => {
 			.then(async cache => {
 				try {
 					const response = await fetch(event.request);
-					await cache.put(event.request, response.clone());
+					cache.put(event.request, response.clone());
 					return response;
 				} catch (e) {
 					const response = await cache.match(event.request);
