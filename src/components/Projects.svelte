@@ -88,11 +88,11 @@
     }]
   }, {
     title: 'Chipmunk Port',
-    link: 'https://www.jakecoffman.com/cpebiten/',
+    link: 'https://www.jakecoffman.com/cp-ebiten/',
     image: 'cp.gif',
     text: 'Go port of the excellent Chipmunk2D, originally in C.',
     links: [{
-      href: 'https://www.jakecoffman.com/cpebiten/',
+      href: 'https://www.jakecoffman.com/cp-ebiten/',
       name: 'Demo'
     },{
       href: 'https://github.com/jakecoffman/cp',
