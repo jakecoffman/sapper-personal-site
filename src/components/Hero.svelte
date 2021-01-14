@@ -1,5 +1,6 @@
 <style>
 	h1 {
+		font-family: Roboto-Bold, sans-serif;
 		font-size: 12vw;
 		margin: 0;
 		padding-top: 1rem;
