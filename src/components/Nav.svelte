@@ -25,10 +25,14 @@
 
   ul {
     display: flex;
-    gap: 1rem;
+    /*gap: 1rem; safari not honoring this */
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  li {
+      margin-left: 1rem;
   }
 
   a {
