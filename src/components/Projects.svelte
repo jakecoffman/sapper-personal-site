@@ -10,6 +10,7 @@
 
   .cards {
     display: grid;
+    margin-top: 3rem;
   }
 
   @media (min-width: 695px) {

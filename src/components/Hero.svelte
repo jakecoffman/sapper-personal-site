@@ -97,10 +97,10 @@
     let w = c.width = parent.clientWidth;
     let h = c.height = parent.clientHeight;
     let gl = c.getContext('webgl', {preserveDrawingBuffer: true})
-        , webgl = {}
-        , opts = {
-      projectileAlpha: .8,
-      projectileLineWidth: 1.3,
+    let webgl = {}
+    let opts = {
+      projectileAlpha: 2,
+      projectileLineWidth: 1.5,
       fireworkAngleSpan: .5,
       baseFireworkVel: 3,
       addedFireworkVel: 3,
@@ -109,7 +109,7 @@
       xFriction: .995,
       baseShardVel: 1,
       addedShardVel: .2,
-      fireworks: 100,
+      fireworks: 25,
       baseShardsParFirework: 10,
       addedShardsParFirework: 10,
       shardFireworkVelMultiplier: .3,
@@ -186,7 +186,6 @@ void main(){
     webgl.data = [];
 
     webgl.clear = function () {
-
       gl.uniform1i(webgl.modeUniformLoc, 1);
       const a = .1;
       webgl.data = [
@@ -201,8 +200,8 @@ void main(){
       gl.uniform1i(webgl.modeUniformLoc, 0);
       webgl.data.length = 0;
     }
-    webgl.draw = function (glType) {
 
+    webgl.draw = function (glType) {
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(webgl.data), gl.STATIC_DRAW);
       gl.drawArrays(glType, 0, webgl.data.length / 4);
     }
@@ -212,7 +211,7 @@ void main(){
         , sins = []
         , coss = []
         , maxShardsParFirework = opts.baseShardsParFirework + opts.addedShardsParFirework
-        , tau = 6.283185307179586476925286766559;
+        , tau = 2 * Math.PI;
 
     for (let i = 0; i < maxShardsParFirework; ++i) {
       sins[i] = Math.sin(tau * i / maxShardsParFirework);
@@ -227,9 +226,8 @@ void main(){
     }
 
     Firework.prototype.reset = function () {
-
       let angle = -Math.PI / 2 + (Math.random() - .5) * opts.fireworkAngleSpan
-          , vel = opts.baseFireworkVel + opts.addedFireworkVel * Math.random();
+      let vel = opts.baseFireworkVel + opts.addedFireworkVel * Math.random();
 
       this.mode = 0;
       this.vx = vel * Math.cos(angle);
@@ -238,7 +236,7 @@ void main(){
       this.x = Math.random() * w;
       this.y = h;
 
-      this.hue = tick * opts.initHueMultiplier;
+      this.hue = Math.random();
 
     }
     Firework.prototype.step = function () {
@@ -308,7 +306,6 @@ void main(){
       this.y = this.parent.y;
       this.vx = this.parent.vx * opts.shardFireworkVelMultiplier + vx;
       this.vy = this.parent.vy * opts.shardFireworkVelMultiplier + vy;
-      this.starty = this.y;
       this.dead = false;
       this.tick = 1;
     }
@@ -316,8 +313,8 @@ void main(){
 
       this.tick += .05;
 
-      let px = this.x
-          , py = this.y;
+      let px = this.x;
+      let py = this.y;
 
       this.x += this.vx *= opts.xFriction;
       this.y += this.vy += opts.gravity;

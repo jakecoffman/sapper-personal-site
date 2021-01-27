@@ -27,14 +27,16 @@
   </p>
 
   <p>
-    I then moved to a startup called Appistry where I helped create an ETL system that took HL7 data and
+    Next I worked at a startup called Appistry where I helped create an ETL system that took HL7 data and
     transformed it into SQL. I created a search interface for that data and various other "Big Data" web interfaces.
   </p>
 
   <p>
-    Now I am at World Wide Technology where I work on a variety of web-based technologies. I am the principal
-    developer behind the ATC Lab Gateway and related technologies. I have open sourced
-    <a href="https://github.com/wwt/guac">a port of Apache Guacamole's guacamole-client</a>.
+    Now I am at World Wide Technology where I am the principal developer behind the ATC Lab Gateway.
+  </p>
+
+  <p>
+    <a href="https://portfolio.jakecoffman.com">Click here</a> to see a portfolio of my work at WWT.
   </p>
 
   <h3>Interests</h3>
